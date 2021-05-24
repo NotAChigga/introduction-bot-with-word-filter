@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Introduction Bot</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Introduction Bot">
+  <meta name="keywords" content="programmer, website, web development">
+
+  <meta name="author" content="Hafidh Zuhdian">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafidh Zuhdian</title>
+
+  <link rel="stylesheet" href="utsStyle.css">
+
+</head>
+
+<body>
+  <div class="container cf">
+    <div class="main">
+      <div class="header">
+        <h1 class="title">Introduction Bot</h1>
+        <h5 class="title2">Just say hi! And we'll do the rest</h5>
+      </div>
+      <div class="major">
+        <h2>Major</h2>
+        <select id="majorBox" class="major-box">
+          <option hidden></option>
+          <option>Computer Science</option>
+          <option>Mathematics</option>
+          <option>Physics</option>
+          <option>Chemistry</option>
+        </select>
+      </div>
+      <div class="name">
+        <h2>Name</h2>
+        <input id="nameBox" class="name-box" type="text" >
+      </div>
+      <div class="email">
+        <h2>Email</h2>
+        <input id="emailBox" class="email-box" type="text">
+      </div>
+      <div class="phone">
+        <h2>Phone Number</h2>
+        <input id="phoneBox" class="phone-box" type="text">
+      </div>
+      <div class="comment">
+        <h2>Tell us about yourself</h2>
+        <textarea id="commentBox" class="comment-box" rows="5" cols="60" placeholder=""></textarea>
+      </div>
+      <div class="reset">
+        <button id="resetButton" class="reset-button" onclick="resetAll()">Reset</button>
+      </div>
+      <div class="process">
+        <button id="processButton" class="process-button" onclick="result()" >Process</button>
+      </div>
+    </div>
+    <div class="side-bar">
+      <div class="result">
+        <h2>Result</h2>
+        <p id="resultBox" class="result-box"></p>
+      </div>
+      <div class="creator">
+        <h2>About Creator</h2>
+        <div class="author-img"></div>
+        <div class="creator-bio">
+          <h3>Mochamad Hafidh Zuhdian</h3><br>
+          <h3>19/440452/PA/19082</h3><br>
+          <h3>Web Programming Mid Term Exam</h3>
+        </div>
+        <div class="logo">
+          <svg class="twitter" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="24" height="24"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#262626"><path d="M172,30.82226c-6.4388,2.85547 -12.9056,5.01107 -20.07226,5.73894c7.16667,-4.3112 12.9056,-11.47787 15.76107,-19.3724c-7.16667,4.31119 -14.33333,7.16667 -22.19988,8.6224c-7.16667,-7.16667 -16.48893,-11.47787 -26.51106,-11.47787c-19.3724,0 -35.13347,15.76107 -35.13347,35.10547c0,2.88346 0,5.73893 0.72786,7.89453c-29.39453,-1.42774 -55.17773,-15.06119 -72.39453,-36.56119c-3.58333,5.03906 -5.01107,11.47786 -5.01107,17.91667c0,12.20573 6.43881,22.95573 15.76107,29.39453c-5.73893,-0.72786 -11.44987,-2.1556 -15.76107,-4.31119c0,0 0,0 0,0.72786c0,17.18881 12.17774,31.52214 27.93881,34.4056c-2.85547,0.69988 -5.71094,1.42774 -9.29427,1.42774c-2.1556,0 -4.3112,0 -6.4668,-0.72786c4.31119,14.33333 17.2168,24.38346 32.97786,24.38346c-12.17773,9.32227 -27.23893,15.03321 -43.72786,15.03321c-2.85547,0 -5.73893,0 -8.5944,-0.69988c15.76107,10.02214 34.4056,15.76107 53.75,15.76107c65.22787,0 100.33333,-53.75 100.33333,-100.33333c0,-1.42774 0,-2.85547 0,-4.31119c7.16667,-5.01107 12.9056,-11.44988 17.91667,-18.61654"></path></g></g>
+          </svg>
+          <svg class="line" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="24" height="24"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#262626"><path d="M90.01333,159.53358c-7.57517,4.16383 -7.25267,-1.96725 -6.92658,-3.85567c0.1935,-1.12517 1.075,-6.40342 1.075,-6.40342c0.25083,-1.9135 0.516,-4.87333 -0.24008,-6.76175c-0.84208,-2.07833 -4.17817,-3.1605 -6.62917,-3.68725c-36.15583,-4.75508 -62.91975,-29.89217 -62.91975,-59.90258c0,-33.4755 33.755,-60.71242 75.23208,-60.71242c41.47708,0 75.2285,27.23692 75.2285,60.71242c0,37.59633 -39.87533,61.39683 -74.82,80.61067zM65.82225,92.61125c0,-2.00667 -1.64475,-3.63708 -3.66575,-3.63708h-10.234v-23.9295c0,-2.00667 -1.64475,-3.63708 -3.66575,-3.63708c-2.02458,0 -3.66575,1.63042 -3.66575,3.63708v27.57017c0,2.01025 1.64475,3.64067 3.66575,3.64067h13.89975c2.021,0.00358 3.66575,-1.634 3.66575,-3.64425zM76.52925,65.04467c0,-2.00667 -1.64475,-3.63708 -3.66575,-3.63708c-2.02458,0 -3.66575,1.63042 -3.66575,3.63708v27.57017c0,2.01025 1.64475,3.64067 3.66575,3.64067c2.02458,0 3.66575,-1.634 3.66575,-3.64067zM109.99758,65.04467c0,-2.00667 -1.64475,-3.63708 -3.66575,-3.63708c-2.02458,0 -3.67292,1.63042 -3.67292,3.63708v17.06025l-14.2545,-19.23892c-0.688,-0.91017 -1.78808,-1.45483 -2.93117,-1.45483c-0.39417,0 -0.78475,0.05733 -1.16458,0.18633c-1.50142,0.49808 -2.50833,1.88483 -2.50833,3.45075v27.57017c0,2.01025 1.64833,3.64067 3.67292,3.64067c2.02817,0 3.67292,-1.634 3.67292,-3.64067v-17.05308l14.24733,19.23892c0.688,0.91017 1.7845,1.45483 2.93117,1.45483c0.39058,0 0.78475,-0.0645 1.16458,-0.18992c1.505,-0.49092 2.50833,-1.87767 2.50833,-3.45075zM132.49375,75.19267h-10.234v-6.51092h10.234c2.02817,0 3.67292,-1.63042 3.67292,-3.63708c0,-2.00667 -1.64833,-3.63708 -3.67292,-3.63708h-13.89975c-2.02458,0 -3.66575,1.63042 -3.66575,3.63708c0,0.00358 0,0.00358 0,0.01075v13.76717v0.00358c0,0 0,0 0,0.00358v13.77792c0,2.01025 1.64833,3.64067 3.66575,3.64067h13.89975c2.02458,0 3.67292,-1.634 3.67292,-3.64067c0,-2.00667 -1.64833,-3.63708 -3.67292,-3.63708h-10.234v-6.51092h10.234c2.02817,0 3.67292,-1.63042 3.67292,-3.63708c0,-2.01025 -1.64833,-3.64067 -3.67292,-3.64067z"></path></g></g>
+        </svg>
+        <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="24" height="24"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#262626"><path d="M156.23893,0h-140.47786c-8.5944,0 -15.76107,7.16667 -15.76107,15.76107v140.47786c0,8.5944 7.16667,15.76107 15.76107,15.76107h140.47786c8.5944,0 15.76107,-7.16667 15.76107,-15.76107v-140.47786c0,-8.5944 -7.16667,-15.76107 -15.76107,-15.76107zM50.16667,143.33333h-28.66667v-78.83333h28.66667zM35.83333,55.17774c-8.5944,0 -14.33333,-5.73893 -14.33333,-12.9056c0,-7.86654 5.73893,-13.60547 14.33333,-13.60547c8.5944,0 14.33333,5.73893 14.33333,12.9056c0,7.86654 -5.73893,13.60547 -14.33333,13.60547zM150.5,143.33333h-28.66667v-43c0,-11.47786 -7.89453,-14.33333 -10.02213,-14.33333c-2.1556,0 -11.47787,1.42774 -11.47787,14.33333c0,1.42774 0,43 0,43h-28.66667v-78.83333h28.66667v11.47787c4.3112,-6.4668 11.47787,-11.47787 25.08333,-11.47787c13.60547,0 25.08333,10.75 25.08333,35.83333z"></path></g></g>
+        </svg>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="footer">
+    <footer>
+      <p>&copy; Copyright 2020. HafidhZuhdian.
+        All Rights Reserved.
+      </p>
+    </footer>
+  </div>
+  <script src="uts1.js"></script>
+</body>
+
+</html>
+

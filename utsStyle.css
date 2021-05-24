@@ -1,0 +1,370 @@
+/* Reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Clear*/
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+/*Start CSS*/
+body{
+	background-color: #010101;
+	color: #010101;
+}
+.container{
+	width: 1000px;
+	height: 600px;
+	margin: 80px auto 80px auto;
+	background-color: #262626;
+	border: 0px solid #262626;
+	border-radius: 15px;
+}
+.main{
+	width: 600px;
+	height: 600px;
+	float: left;
+	box-sizing: border-box;
+	display: inline-block;
+	color: #fde24f;
+	line-height: 28px;
+}
+.header{
+	padding-top: 60px;
+	padding-bottom: 20px;
+	margin-left: 100px;
+	margin-bottom: 50px;
+}
+.header h1{
+	font-family: 'Noto Serif JP', serif;
+	font-size: 40px;
+	font-weight: 700;
+	letter-spacing: 0.75px;
+}
+.header h5{
+	font-family: 'Rubik', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	color: #fde24f;
+}
+.major{
+	display: inline-block;
+	width: 230px;
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+.major h2{
+	font-family: 'Rubik', sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.75px;
+	color: #fde24f;
+}
+.major-box{
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	letter-spacing: 0.75px;
+	background-color:  #262626;
+	text-decoration: none;
+	color: #fde24f;
+	border: 0px  #262626;
+	border-bottom: 1px solid  #fde24f;
+	width: 210px;
+	height: 30px;
+}
+.name{
+	display: inline-block;
+	width: 230px;
+	margin-bottom: 20px;
+}
+.name h2{
+	font-family: 'Rubik', sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.75px;
+	color: #fde24f;
+}
+.name-box{
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	letter-spacing: 0.75px;
+	background-color:  #262626;
+	text-decoration: none;
+	color: #fde24f;
+	border: 0px  #262626;
+	border-bottom: 1px solid  #fde24f;
+	width: 210px;
+	height: 30px;
+}
+.email{
+	display: inline-block;
+	width: 230px;
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+.email h2{
+	font-family: 'Rubik', sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.75px;
+	color: #fde24f;
+}
+.email-box{
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	letter-spacing: 0.75px;
+	background-color:  #262626;
+	text-decoration: none;
+	color: #fde24f;
+	border: 0px  #262626;
+	border-bottom: 1px solid  #fde24f;
+	width: 210px;
+	height: 30px;
+}
+.phone{
+	display: inline-block;
+	width: 230px;
+}
+.phone h2{
+	font-family: 'Rubik', sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.75px;
+	color: #fde24f;
+}
+.phone-box{
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	letter-spacing: 0.75px;
+	background-color:  #262626;
+	text-decoration: none;
+	color: #fde24f;
+	border: 0px  #262626;
+	border-bottom: 1px solid  #fde24f;
+	width: 210px;
+	height: 30px;
+}
+.comment{
+	display: inline-block;
+	width: 470px;
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+.comment h2{
+	font-family: 'Rubik', sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.75px;
+	color: #fde24f;
+}
+.comment-box{
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	letter-spacing: 0.75px;
+	background-color:  #262626;
+	text-decoration: none;
+	color: #fde24f;
+	border: 0px  #262626;
+	border-bottom: 1px solid  #fde24f;
+	width: 450px;
+}
+.reset{
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	margin-left: 100px;
+	margin-bottom: 20px;
+	position: relative;
+	left: 30px;
+}
+.reset-button{
+	font-family: 'Rubik', sans-serif;
+	font-weight: 700;
+	background-color:  #fde24f;
+	text-decoration: none;
+	color: #262626;
+	border: 5px solid  #fde24f;
+	border-radius: 3px;
+	height: 50px;
+	width: 150px;
+}
+.process{
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	margin-bottom: 20px;
+	position: relative;
+	left: 110px;
+}
+.process-button{
+	font-family: 'Rubik', sans-serif;
+	font-weight: 700;
+	background-color:  #fde24f;
+	text-decoration: none;
+	color: #262626;
+	border: 5px solid  #fde24f;
+	border-radius: 3px;
+	height: 50px;
+	width: 150px;
+}
+.side-bar{
+	background-color: #d6dcd8;
+	width: 400px;
+	height: 600px;
+	float: right;
+	box-sizing: border-box;
+	display: inline-block;
+	border: 0px solid #d6dcd8;
+	border-radius: 0px 15px 15px 0px;
+}
+.result{
+	display: inline-block;
+	width: 340px;
+	height: 320px;
+	padding-top: 60px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+}
+.result h2{
+	font-family: 'Noto Serif JP', serif;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 0.75px;	
+	padding-bottom: 30px;
+}
+.result-box {
+	font-family: 'Rubik', sans-serif;
+	font-size: 17px;
+	text-align: left;
+}
+.creator{
+	display: inline-block;
+	width: 340px;
+	height: 210px;
+	padding-left: 40px;
+	padding-right: 20px;
+}
+.creator h2{
+	float: left;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 0.75px;	
+	text-align: left;
+	width: 170px;
+	margin-bottom: 20px;
+	margin-right: none;
+	border-bottom: 2px solid #262626;
+}
+.author-img{
+	background-image: url(author1.png);
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	border: 3px solid #262626;
+	border-radius: 100%;
+	box-sizing: border-box;
+	float: right;
+	margin-top: 12px;
+}
+.creator-bio{
+	float: left;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.75px;
+	word-spacing: 1px;
+	line-height: 12px;
+	padding-top: 10	px;
+	padding-bottom: 150px;
+	font-family: 'Rubik', sans-serif;
+}
+.twitter{
+	position: relative;
+	right: 160px;
+	top: 150px;
+}
+.line{
+	position: relative;
+	right: 110px;
+	top: 150px;
+}
+.linkedin{
+	position: relative;
+	right: 40px;
+	top: 125px;
+}
+.footer{
+	position: relative;
+	font-family: 'Rubik', sans-serif;
+	font-size: 15px;
+	text-align: center;
+	color: #d6dcd8;
+	bottom: 25px;
+}
